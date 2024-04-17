@@ -1,7 +1,7 @@
 ################################################################################
 #
 # stitching together the videos with transitions
-# call with `python3 merge_videos.py`
+# call with ` ~/.virtualenvs/bin/python3 merge_videos.py`
 # 
 ################################################################################
 from moviepy.editor import *
