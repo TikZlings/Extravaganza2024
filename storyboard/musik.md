@@ -1,5 +1,7 @@
+# Music and background list
+
 ## Grand Finale
-*� �AULD LANG SYNE 💥 Royal Scots Dragoon Guards💥
+* AULD LANG SYNE Royal Scots Dragoon Guards
 * 2:46 - 3:04
 * https://youtu.be/to1xT93IlUI
 
@@ -36,7 +38,6 @@ batman-template: example for batman light
 * patocrossing.jpg (privat)
 
 
-## Music and background list
 
 ## Christmas in Africa
 
