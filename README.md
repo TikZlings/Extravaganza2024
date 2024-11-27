@@ -4,14 +4,17 @@ This repository contains the souce code of the Great TikZlings Extravanganza 202
 
 The full video is available from ...
 
-## 1. Christmas Rocks
+## 1. Flower power
 
-<img align="right" src="./example-scene/Example.png" height="100">
+<img align="right" src="./samcarter/flowerpower/flowerpower.png" height="100">
 
-- Music: Rockin' Around The Christmas Tree
-  https://www.youtube.com/watch?v=O1x-hOOrl5E
+- Music: San Francisco - Scott McKenzie 
+  https://www.youtube.com/watch?v=bch1_Ep5M1s
+  
+- Image: Golden Gate Bridge San Francisco - crispy-fotografie
+  https://pixabay.com/de/photos/golden-gate-bridge-san-francisco-4271364/
 
-- Source Code: [./example-scene/](https://github.com/TikZlings/Extravaganza2023/tree/main/example-scene)
+- Source Code: [./samcarter/flowerpower/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/flowerpower)
 
 
 

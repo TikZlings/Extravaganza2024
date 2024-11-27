@@ -2,6 +2,7 @@
 rm Example.mp4
 
 # convert to png images
+pdftoppm -png -r 48 -progress -singlefile  Example.pdf Example
 pdftoppm -png -r 240 -progress Example.pdf Example
 
 # convert to video
@@ -13,6 +14,3 @@ HandBrakeCLI --crop 0:0:0:0  -i Example_raw.mp4 -o Example.mp4
 # clean up
 rm Example-*.png
 rm Example_raw.mp4
-
-# view :)
-open Example.mp4

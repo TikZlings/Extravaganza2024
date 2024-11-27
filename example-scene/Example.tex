@@ -21,7 +21,7 @@
   \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
 
     % some movement
-    \fill[red] (\thepage/600,1-\thepage/600) circle [radius=0.2cm];
+    \fill[red] (\insertoverlaynumber/600,1-\insertoverlaynumber/600) circle [radius=0.2cm];
     
     % showing a couple of example coordinates
     \node[anchor=south west] at (0,0) {(0,0)};
