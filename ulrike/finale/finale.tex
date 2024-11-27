@@ -1,0 +1,85 @@
+% !Mode:: "TeX:UTF-8:Main"
+
+% slow play!
+% music:
+% 0:00 - 0:30
+% https://www.youtube.com/watch?v=WYeDsa4Tw0c&t=5s
+ 
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usetikzlibrary{ducks}
+\usetikzlibrary{tikzlings}
+\usetikzlibrary {decorations.markings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\makebox[\paperwidth]
+{%\includegraphics[width=0.9\paperwidth,trim=0cm 0cm 0cm 5cm]
+%  {Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2}
+}}
+
+\begin{document}
+\newsavebox\mybox
+\savebox\mybox{\tikz{\duck}}	
+%\end{document}
+\begin{frame}
+  \begin{tikzpicture}[%
+  remember picture,
+  ] 
+  \edef\scalefactor{\fpeval{0.5+\value{page}/600}} 
+  \edef\loopvariable{\inteval{\the\value{page}}}
+  \path[use as bounding box](0,0)rectangle(\textwidth,\textheight-15pt);   
+  \path[draw=red]
+   (-0.6\textwidth,-0.1\textheight) -- (\textwidth,0.3\textheight)--
+   (0,0.6\textheight)--(1.2\textwidth,\textheight);
+  \ifnum\loopvariable <200  
+  \path[draw=green, thick]  
+    (-0.6\textwidth,-0.1\textheight)  -- 
+    (\fpeval{\loopvariable/200}\textwidth,
+     \fpeval{\loopvariable/200*0.3}\textheight)
+   pic[scale=\scalefactor] {rhino};
+  \else
+  \ifnum\loopvariable <400
+   \path[draw=green, thick]  
+     (\textwidth,0.3\textheight)  -- 
+     (\fpeval{1-(\loopvariable-200)/200}\textwidth,
+      \fpeval{(0.3+(\loopvariable-200)/200*0.3)}\textheight)
+     pic[scale=\scalefactor] {rhino};
+    \else
+     \path[draw=green, thick]  
+      (0,0.6\textheight)  -- 
+      (\fpeval{(\loopvariable-400)/200}\textwidth,
+       \fpeval{(0.6+(\loopvariable-400)/200*0.2)}\textheight)
+      pic[scale=\scalefactor] {rhino};
+   \fi   
+  \fi 
+  \edef\loopvariable{\inteval{\the\value{page}-10}}
+  \ifnum\loopvariable>0
+  \ifnum\loopvariable <200  
+  \path[draw=green, thick]  
+    (-0.6\textwidth,-0.1\textheight)  -- 
+    (\fpeval{\loopvariable/200}\textwidth,
+     \fpeval{\loopvariable/200*0.3}\textheight)
+    pic[scale=\scalefactor] {bear};
+  \else
+  \ifnum\loopvariable <400
+   \path[draw=green, thick]  
+     (\textwidth,0.3\textheight)  -- 
+     (\fpeval{1-(\loopvariable-200)/200}\textwidth,
+      \fpeval{(0.3+(\loopvariable-200)/200*0.3)}\textheight)
+     pic[scale=\scalefactor] {bear};
+    \else
+     \path[draw=green, thick]  
+      (0,0.6\textheight)  -- 
+      (\fpeval{(\loopvariable-400)/200}\textwidth,
+       \fpeval{(0.6+(\loopvariable-400)/200*0.2)}\textheight)
+      pic[scale=\scalefactor] {bear};
+   \fi   
+  \fi 
+  \fi     
+  \end{tikzpicture}
+  %\pause[100]
+  \pause[600]
+\end{frame}	
+	
+\end{document}
