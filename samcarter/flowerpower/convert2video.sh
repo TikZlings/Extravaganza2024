@@ -2,6 +2,7 @@
 rm flowerpower.mp4
 
 # convert to png images
+pdftoppm -png -r 48 -progress -singlefile  flowerpower.pdf flowerpower
 pdftoppm -png -r 240 -progress flowerpower.pdf flowerpower
 
 # convert to video
@@ -13,6 +14,3 @@ HandBrakeCLI --crop 0:0:0:0  -i flowerpower_raw.mp4 -o flowerpower.mp4
 # clean up
 rm flowerpower-*.png
 rm flowerpower_raw.mp4
-
-# view :)
-open flowerpower.mp4
