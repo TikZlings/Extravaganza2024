@@ -21,8 +21,20 @@ The full video is available from ...
 <img align="right" src="./samcarter/batbear/batbear.png" height="100">
 
 - Music: The Batman Theme
-  https://youtu.be/lcCYhDu4_ZY
+  https://www.youtube.com/watch?v=lcCYhDu4_ZY
   
-- Image: by Ulrike & Gert Fischer
+- Image: Ulrike & Gert Fischer
 
 - Source Code: [./samcarter/batbear/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/batbear)
+
+## 3. unstoppable
+
+<img align="right" src="./samcarter/unstoppable/unstoppable.png" height="100">
+
+- Music: The Bridge on the River Kwai (1957) - Colonel Bogey March
+  https://www.youtube.com/watch?v=dzWRlTgEB5Q
+  
+- Image: Praça vilaboim - Pedro Medeiros
+  https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_vilaboim_-_panoramio_(cropped).jpg
+
+- Source Code: [./samcarter/batbear/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/unstoppable)

@@ -1,0 +1,16 @@
+\documentclass[border=1pt]{standalone}
+
+\usepackage{tikzducks}
+
+\begin{document}
+
+\begin{tikzpicture}
+  
+  \foreach \quack in {1,...,100}{
+    \shuffleducks
+    \duck[xscale=-1,xshift=-2.5*\quack cm,\randomhead]
+  }
+  
+\end{tikzpicture}
+
+\end{document}
