@@ -2,7 +2,7 @@
 rm batbear.mp4
 
 # convert to png images
-pdftoppm -png -r 48 -progress -singlefile  batbear.pdf batbear
+pdftoppm -png -r 48 -progress -singlefile -f 500 batbear.pdf batbear
 pdftoppm -png -r 240 -progress batbear.pdf batbear
 
 # convert to video

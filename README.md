@@ -16,5 +16,13 @@ The full video is available from ...
 
 - Source Code: [./samcarter/flowerpower/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/flowerpower)
 
+## 2. Bat Bär
 
+<img align="right" src="./samcarter/batbear/batbear.png" height="100">
 
+- Music: The Batman Theme
+  https://youtu.be/lcCYhDu4_ZY
+  
+- Image: by Ulrike & Gert Fischer
+
+- Source Code: [./samcarter/batbear/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/batbear)
