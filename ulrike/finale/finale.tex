@@ -38,7 +38,7 @@
     (-0.6\textwidth,-0.1\textheight)  -- 
     (\fpeval{\loopvariable/200}\textwidth,
      \fpeval{\loopvariable/200*0.3}\textheight)
-   pic[scale=\scalefactor] {##2};
+   pic[scale=\scalefactor,xscale=-1] {##2};
   \else
   \ifnum\loopvariable <400
    \path[draw=green, thick]  
@@ -51,7 +51,7 @@
       (0,0.6\textheight)  -- 
       (\fpeval{(\loopvariable-400)/200}\textwidth,
        \fpeval{(0.6+(\loopvariable-400)/200*0.2)}\textheight)
-      pic[scale=\scalefactor] {##2};
+      pic[scale=\scalefactor,xscale=-1] {##2};
    \fi   
   \fi 
   \fi
@@ -62,7 +62,7 @@
   \begin{tikzpicture}[%
   remember picture,
   ] 
-  \def\scalefactor{\fpeval{0.5+\loopvariable/1200}} 
+  \def\scalefactor{\fpeval{1-\loopvariable/1200}} 
   \path[use as bounding box](0,0)rectangle(\textwidth,\textheight-15pt);   
   \path[draw=red]
    (-0.6\textwidth,-0.1\textheight) -- (\textwidth,0.3\textheight)--
