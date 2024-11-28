@@ -38,3 +38,14 @@ The full video is available from ...
   https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_vilaboim_-_panoramio_(cropped).jpg
 
 - Source Code: [./samcarter/batbear/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/unstoppable)
+
+## 4. Abbey Road
+
+<img align="right" src="./samcarter/unstoppable/abbeyroad.png" height="100">
+
+- Music: ???
+  
+- Image: Abbey Road zebra crossing - m.caimary
+  https://en.wikipedia.org/wiki/File:Abbey_Road_zebra_crossing,_London_2007-03-31.jpg
+
+- Source Code: [./samcarter/abbeyroad/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/abbeyroad)
