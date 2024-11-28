@@ -22,10 +22,10 @@
 \begin{document}
 
 \begin{frame}
+  \vskip-3cm\hskip-3cm
   \begin{tikzpicture}[
-    yshift=5cm,
     remember picture,
-    overlay,
+%    overlay, % see https://tex.stackexchange.com/a/577831/36296 
     decoration={
       markings, 
       mark=at position \thepage/600 with {
@@ -38,15 +38,17 @@
     
     \node (org) at (1,-10) {}; 
     
-    \node[fill=yellow!50!orange!60!black,circle,inner sep=0pt,name path=circle,minimum width=2.7cm] (c) at (aux1) {};
-    
-    % from https://tex.stackexchange.com/a/426259/36296
-    \fill[yellow!50!orange!60!black] (org)  -- (tangent cs:node=c,point={(org)},solution=1) -- (tangent cs:node=c,point={(org)},solution=2) -- (org);    
-    
-    \node at (c) {\includegraphics[width=2.5cm]{bbear}};
+    \begin{scope}[opacity=0.5,transparency group]
+      \node[fill=yellow!50!orange,circle,inner sep=0pt,name path=circle,minimum width=2.7cm] (c) at (aux1) {};
+      
+      % from https://tex.stackexchange.com/a/426259/36296
+      \fill[yellow!50!orange] (org)  -- (tangent cs:node=c,point={(org)},solution=1) -- (tangent cs:node=c,point={(org)},solution=2) -- (org);    
+      
+      \node at (c) {\includegraphics[width=2.5cm]{bbear}};
+    \end{scope}
     
   \end{tikzpicture}
-  \pause[600]
+  \pause[549]
 \end{frame}
 
 \end{document}
