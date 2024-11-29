@@ -8,13 +8,9 @@ pdftoppm -png -r 240 -progress abbeyroad.pdf abbeyroad
 # convert to video
 ffmpeg  \
   -ss 00:00:00 -i abbeyroad-%03d.png \
-  -shortest abbeyroad_raw.mp4
-
-# ffmpeg  \
-#   -ss 00:00:00 -i abbeyroad-%03d.png \
-#   -ss 01:00:04 -i The_Bridge_on_the_River_Kwai_1957_-_Colonel_Bogey_March-ostmusicmix-dzWRlTgEB5Q.m4a \
-#   -shortest abbeyroad_raw.mp4  
-
+  -ss 00:00:00 -i merged.m4a \
+  -shortest abbeyroad_raw.mp4  
+  
 # repair video
 HandBrakeCLI --crop 0:0:0:0  -i abbeyroad_raw.mp4 -o abbeyroad.mp4
 
