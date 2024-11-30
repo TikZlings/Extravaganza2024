@@ -68,7 +68,7 @@ The full video is available from ...
 <img align="right" src="./samcarter/paddington/paddington.png" height="100">
 
 - Music: The Adventure of Paddington - Marmalade Song
-  https://www.youtube.com/watch?v=EHxUb5akz48
+  https://www.youtube.com/watch?v=es4P5YDI2-w
   
 - Image: Jeff Hitchcock 
   https://en.wikipedia.org/wiki/File:Paddington_Station_GWR.jpg
