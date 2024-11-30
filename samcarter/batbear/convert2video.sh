@@ -15,5 +15,7 @@ ffmpeg \
 HandBrakeCLI --crop 0:0:0:0  -i batbear_raw.mp4 -o batbear.mp4
 
 # clean up
-rm batbear-*.png
-rm batbear_raw.mp4
+if [ -e "batbear.mp4" ]; then
+  rm batbear-*.png
+  rm batbear_raw.mp4
+fi

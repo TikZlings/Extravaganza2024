@@ -15,5 +15,7 @@ ffmpeg  \
 HandBrakeCLI --crop 0:0:0:0  -i abbeyroad_raw.mp4 -o abbeyroad.mp4
 
 # clean up
-rm abbeyroad-*.png
-rm abbeyroad_raw.mp4
+if [ -e "abbeyroad.mp4" ]; then
+  rm abbeyroad-*.png
+  rm abbeyroad_raw.mp4
+fi

@@ -15,5 +15,7 @@ ffmpeg \
 HandBrakeCLI --crop 0:0:0:0  -i unstoppable_raw.mp4 -o unstoppable.mp4
 
 # clean up
-rm unstoppable-*.png
-rm unstoppable_raw.mp4
+if [ -e "unstoppable.mp4" ]; then
+  rm unstoppable-*.png
+  rm unstoppable_raw.mp4
+fi

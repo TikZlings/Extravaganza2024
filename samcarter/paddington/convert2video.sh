@@ -15,5 +15,7 @@ ffmpeg \
 HandBrakeCLI --crop 0:0:0:0  -i paddington_raw.mp4 -o paddington.mp4
 
 # clean up
-rm paddington-*.png
-rm paddington_raw.mp4
+if [ -e "paddington.mp4" ]; then
+  rm paddington-*.png
+  rm paddington_raw.mp4
+fi 

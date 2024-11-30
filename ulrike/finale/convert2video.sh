@@ -15,5 +15,7 @@ ffmpeg  \
 HandBrakeCLI --crop 0:0:0:0  -i finale_raw.mp4 -o finale.mp4
 
 # clean up
-rm finale-*.png
-rm finale_raw.mp4
+if [ -e "finale.mp4" ]; then
+  rm finale-*.png
+  rm finale_raw.mp4
+fi

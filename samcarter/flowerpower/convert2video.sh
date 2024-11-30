@@ -15,5 +15,7 @@ ffmpeg \
 HandBrakeCLI --crop 0:0:0:0  -i flowerpower_raw.mp4 -o flowerpower.mp4
 
 # clean up
-rm flowerpower-*.png
-rm flowerpower_raw.mp4
+if [ -e "flowerpower.mp4" ]; then
+  rm flowerpower-*.png
+  rm flowerpower_raw.mp4
+fi
