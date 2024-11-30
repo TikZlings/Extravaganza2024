@@ -2,7 +2,7 @@
 rm whitewaterride.mp4
 
 # convert to png images
-pdftoppm -png -r 48 -progress -singlefile -f 375 whitewaterride.pdf whitewaterride
+pdftoppm -png -r 48 -progress -singlefile -f 136 whitewaterride.pdf whitewaterride
 pdftoppm -png -r 240 -progress whitewaterride.pdf whitewaterride
 
 # convert to video
