@@ -6,21 +6,79 @@
 % https://www.youtube.com/watch?v=WYeDsa4Tw0c&t=5s
  
 \documentclass[aspectratio=169]{beamer}
-
+\usepackage[svgnames,x11names]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{ducks}
 \usetikzlibrary{tikzlings}
 \usetikzlibrary {decorations.markings}
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{background canvas}{\makebox[\paperwidth]
-{%\includegraphics[width=0.9\paperwidth,trim=0cm 0cm 0cm 5cm]
-%  {Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2}
-}}
+\setbeamertemplate{background canvas}{}
+
+\ExplSyntaxOn
+\AddToHook{shipout/background}%
+ {
+   \put(0,-\paperheight){%
+      \includegraphics[page=\int_eval:n{\int_mod:nn{\value{page}}{10}+1}]{starsky}}
+   \put(0,-\paperheight+1cm){\scalebox{0.3}{\usebox\mybox}}
+   \put(1cm,-\paperheight+2.5cm){\scalebox{0.4}{\usebox\mybox}} 
+   \put(0.1cm,-\paperheight+3cm){\scalebox{0.25}{\usebox\mybox}}    
+   \put(1cm,-\paperheight+2cm){\scalebox{0.3}{\usebox\mybox}}
+   \put(3cm,-\paperheight+1.5cm){\scalebox{0.4}{\usebox\mybox}} 
+   \put(1cm,-1.8cm){\scalebox{0.25}{\usebox\mybox}} 
+   \put(2cm,-1.9cm){\scalebox{0.26}{\usebox\mybox}} 
+   \put(0cm,-1.9cm){\scalebox{0.29}{\usebox\mybox}} 
+ }
+\AddToHook{shipout/foreground}%
+ {
+   \put(\paperwidth-3cm,-\paperheight+0.5cm){\scalebox{0.35}{\usebox\mybox}}   
+   \put(\paperwidth-5cm,-\paperheight+0.2cm){\scalebox{0.3}{\usebox\mybox}} 
+   \put(\paperwidth-6.5cm,-\paperheight+0.3cm){\scalebox{0.25}{\usebox\mybox}}
+   \put(\paperwidth-8cm,-\paperheight+0.1cm){\scalebox{0.33}{\usebox\mybox}} 
+   \put(\paperwidth-10cm,-\paperheight){\scalebox{0.25}{\usebox\mybox}}   
+   \put(\paperwidth-12cm,-\paperheight+0.1){\scalebox{0.28}{\usebox\mybox}}
+   \put(\paperwidth-3cm,-3cm){\scalebox{0.28}{\usebox\mybox}}
+   \put(\paperwidth-2cm,-3cm){\scalebox{0.28}{\usebox\mybox}}
+   \put(\paperwidth-3.5cm,-3.4cm){\scalebox{0.27}{\usebox\mybox}}
+ }   
+\ExplSyntaxOff
 
 \begin{document}
 \newsavebox\mybox
-\savebox\mybox{\tikz{\duck}}	
+\savebox\mybox
+ {\tikz{\filldraw[DarkGoldenrod4!50!black] (-.5,-.5) rectangle ++(1,1.5);
+	\shade[top color=white,bottom color=Green4!50!black] (0,1)
+	to[bend right] ++(4,0)
+	to[bend left] ++(-3,2)
+	to[bend right] ++(2,0)
+	to[bend left] ++(-2.5,2)
+	to[bend right] ++(1,0)
+	to[bend left] ++(-1.5,2)
+	-- cycle;
+	\shade[top color=white,bottom color=Green4!50!black] (0,1)
+	to[bend left] ++(-4,0)
+	to[bend right] ++(3,2)
+	to[bend left] ++(-2,0)
+	to[bend right] ++(2.5,2)
+	to[bend left] ++(-1,0)
+	to[bend right] ++(1.5,2)
+	-- cycle;
+	\draw[white,thick] (0,1)
+	to[bend right] ++(4,0)
+	to[bend left] ++(-3,2)
+	to[bend right] ++(2,0)
+	to[bend left] ++(-2.5,2)
+	to[bend right] ++(1,0)
+	to[bend left] ++(-1.5,2);
+	%-- cycle;
+  	\draw[white,thick] (0,1)
+	to[bend left] ++(-4,0)
+	to[bend right] ++(3,2)
+	to[bend left] ++(-2,0)
+	to[bend right] ++(2.5,2)
+	to[bend left] ++(-1,0)
+	to[bend right] ++(1.5,2);
+}}	
 \newcounter{stepcnt}
 %\end{document}
 \makeatletter
@@ -32,22 +90,22 @@
  {\seq_map_indexed_inline:Nn\g_my_tikzlings_seq
    {
    \edef\loopvariable{\inteval{\the\value{page}-##1*20}}
-   \ifnum\loopvariable>0 
+   \ifnum\loopvariable>-10 
   \ifnum\loopvariable <200  
-  \path[draw=green, thick]  
+  \path[]  
     (-0.6\textwidth,-0.1\textheight)  -- 
     (\fpeval{\loopvariable/200}\textwidth,
      \fpeval{\loopvariable/200*0.3}\textheight)
    pic[scale=\scalefactor,xscale=-1] {##2};
   \else
   \ifnum\loopvariable <400
-   \path[draw=green, thick]  
+   \path[]  
      (\textwidth,0.3\textheight)  -- 
      (\fpeval{1-(\loopvariable-200)/200}\textwidth,
       \fpeval{(0.3+(\loopvariable-200)/200*0.3)}\textheight)
      pic[scale=\scalefactor] {##2};
     \else
-     \path[draw=green, thick]  
+     \path[]  
       (0,0.6\textheight)  -- 
       (\fpeval{(\loopvariable-400)/200}\textwidth,
        \fpeval{(0.6+(\loopvariable-400)/200*0.2)}\textheight)
@@ -58,13 +116,30 @@
   } 
  }
 \ExplSyntaxOff
+
+
+\tikzset{
+  laser beam action/.style={
+    line width=\pgflinewidth+.2pt,draw opacity=.1,draw=#1,
+  },
+  laser beam recurs/.code 2 args={%
+    \pgfmathtruncatemacro{\level}{#1-1}%
+    \ifnum\level=0 %
+    \tikzset{preaction={laser beam action=#2}}%
+    \else
+    \tikzset{preaction={laser beam action=#2,laser beam recurs={\level}{#2}}}
+    \fi
+    }
+  ,
+  laser beam/.style={preaction={laser beam recurs={10}{#1}},draw opacity=1,draw=#1},
+}
 \begin{frame}
   \begin{tikzpicture}[%
   remember picture,
   ] 
   \def\scalefactor{\fpeval{1-\loopvariable/1200}} 
   \path[use as bounding box](0,0)rectangle(\textwidth,\textheight-15pt);   
-  \path[draw=red]
+  \path[draw=yellow!80!white!90!black,opacity=0.1,line width=1.3cm,rounded corners]
    (-0.6\textwidth,-0.1\textheight) -- (\textwidth,0.3\textheight)--
    (0,0.6\textheight)--(1.2\textwidth,\textheight);
   \processtikzlings
