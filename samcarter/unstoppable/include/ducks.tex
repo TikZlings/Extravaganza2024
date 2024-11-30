@@ -2,13 +2,20 @@
 
 \usepackage{tikzducks}
 
+\pgfmathsetseed{\number\pdfrandomseed} % seed for random generator
+
+
 \begin{document}
 
 \begin{tikzpicture}
   
   \foreach \quack in {1,...,100}{
+    \pgfmathsetmacro{\R}{random(0,10000)/10000}%
+    \pgfmathsetmacro{\G}{random(0,10000)/10000}%
+    \pgfmathsetmacro{\B}{random(0,10000)/10000}%
+    \definecolor{rancolor}{rgb}{\R,\G,\B}%
     \shuffleducks
-    \duck[xscale=-1,xshift=-2.5*\quack cm,\randomhead]
+    \duck[xscale=-1,xshift=-2.5*\quack cm,\randomhead=rancolor]
   }
   
 \end{tikzpicture}
