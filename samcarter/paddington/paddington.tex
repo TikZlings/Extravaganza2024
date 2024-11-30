@@ -15,14 +15,21 @@
     },
 }
 
+\usepackage{xfp}
+\ExplSyntaxOn
+\let\intmodnn\int_mod:nn
+\ExplSyntaxOff
+
 \begin{document}
 
 \begin{frame}
   \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
-    
-%    \node[anchor=west,xshift=-\insertoverlaynumber*0.05cm] at (0,0.25) {\scalebox{-1}[1]{\includegraphics[height=3cm]{ducks}}};
-%    \draw[line width=0.5cm,black!70!white] (0.1,0.6) -- ++ (0,-10cm);  
-%    \node[inner sep=0pt] at (0.1,0.6) {\includegraphics[width=3cm]{patocrossing}};
+  
+    \ifnum \intmodnn{\thepage}{10} > 5
+      \node at (0.75,0.28) {\includegraphics[height=5cm]{paddi}};
+    \else
+      \node at (0.75,0.28) {\includegraphics[height=5cm]{paddi2}};
+    \fi
 
     % credit for background image
     \node[white,text width=.9\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image by @Jeff Hitchcock \href{https://creativecommons.org/licenses/by/2.0/deed.en}{CC BY 2.0} 
@@ -30,7 +37,7 @@
     };
 
   \end{tikzpicture}
-%  \pause[600]
+  \pause[300]
 \end{frame}
 
 \end{document}
