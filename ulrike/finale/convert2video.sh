@@ -2,7 +2,7 @@
 rm finale.mp4
 
 # convert to png images
-pdftoppm -png -r 48 -progress -singlefile -f 300 finale.pdf finale
+pdftoppm -png -r 48 -progress -singlefile -f 555 finale.pdf finale
 pdftoppm -png -r 240 -progress finale.pdf finale
 
 # convert to video

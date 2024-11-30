@@ -74,3 +74,12 @@ The full video is available from ...
   https://en.wikipedia.org/wiki/File:Paddington_Station_GWR.jpg
 
 - Source Code: [./samcarter/paddington/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/paddington)
+
+## 6. Finale
+
+<img align="right" src="./ulrike/finale/finale.png" height="100">
+
+- Music: Vangelis - Conquest of paradise
+  https://www.youtube.com/watch?v=WYeDsa4Tw0c&t=5s
+  
+- Source Code: [./ulrike/finale/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/finale)
