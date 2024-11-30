@@ -16,4 +16,5 @@ HandBrakeCLI --crop 0:0:0:0  -i whitewaterride_raw.mp4 -o whitewaterride.mp4
 
 # clean up
 rm whitewaterride-*.png
+rm water-*.jpg
 rm whitewaterride_raw.mp4
