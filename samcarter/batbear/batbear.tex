@@ -1,0 +1,54 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikzlings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{city_night}}
+\graphicspath{{include/}}
+
+% trick taken from https://topanswers.xyz/tex?q=1989
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+
+\begin{document}
+
+\begin{frame}
+  \vskip-3cm\hskip-3cm
+  \begin{tikzpicture}[
+    remember picture,
+%    overlay, % see https://tex.stackexchange.com/a/577831/36296 
+    decoration={
+      markings, 
+      mark=at position \thepage/600 with {
+        \path (-0.1cm,0) coordinate (aux0) (0.1cm,0) coordinate(aux1) (0,0) coordinate(aux2);
+      }
+    }
+  ]
+  
+    \path[postaction=decorate] (-0.0024, -0.846) .. controls (2.9731, -2.564) and (4.9397, -0.8115) .. (4.9397, -4.2473) .. controls (4.9397, -8.2498) and (-2.9933, -2.7915) .. (0.9993, -3.0728) .. controls (10.1424, -3.7168) and (9.4455, -9.435) .. (6.1477, -7.1566) .. controls (3.4609, -5.3004) and (10.1189, 2.4134) .. (13.8065, -10.4522);
+    
+    \node (org) at (1,-10) {};
+    
+    \begin{scope}[opacity=0.5,transparency group]
+      \node[fill=yellow!50!orange,circle,inner sep=0pt,name path=circle,minimum width=2.7cm] (c) at (aux1) {};
+      
+      % from https://tex.stackexchange.com/a/426259/36296
+      \fill[yellow!50!orange] (org)  -- (tangent cs:node=c,point={(org)},solution=1) -- (tangent cs:node=c,point={(org)},solution=2) -- (org);
+      
+      \node at (c) {\includegraphics[width=2.5cm]{bbear}};
+    \end{scope}
+    
+  \end{tikzpicture}
+  \pause[549]
+\end{frame}
+
+\end{document}
