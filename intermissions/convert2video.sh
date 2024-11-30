@@ -74,5 +74,11 @@ repeatconvert(){
 
 # Converting
 repeatconvert title "./extravaganza-titlepage.pdf" 101
-convert2video Example "Example Szene"
+convert2video flowerpower "Flower Power"
+convert2video batbear "Bat Bär"
+convert2video unstoppable "Unstoppable"
+convert2video abbeyroad "Abbey Road"
+convert2video whitewaterride "White Water Ride"
+convert2video paddington "Paddington"
+convert2video finale "Finale"
 repeatconvert credits "./extravaganza-credits.pdf" 150
