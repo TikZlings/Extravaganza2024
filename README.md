@@ -62,3 +62,15 @@ The full video is available from ...
   https://pixabay.com/videos/water-river-current-nature-outdoor-32558/
 
 - Source Code: [./samcarter/whitewaterride/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/whitewaterride)
+
+## 5. Paddington
+
+<img align="right" src="./samcarter/paddington/paddington.png" height="100">
+
+- Music: The Adventure of Paddington - Marmalade Song
+  https://www.youtube.com/watch?v=EHxUb5akz48
+  
+- Image: Jeff Hitchcock 
+  https://en.wikipedia.org/wiki/File:Paddington_Station_GWR.jpg
+
+- Source Code: [./samcarter/paddington/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/paddington)
