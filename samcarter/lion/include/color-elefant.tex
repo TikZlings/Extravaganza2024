@@ -1,0 +1,41 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{tikzlings}
+
+\newcounter{quack}
+
+\begin{document}
+
+\foreach \macro in {90,...,61}{
+  \setcounter{quack}{\macro}
+  \addtocounter{quack}{-10}
+
+\begin{tikzpicture}
+    \elephant[
+      body=black!\macro!white,
+      ears=black!\thequack!white,
+      hands=black!\thequack!white,
+      feet=black!\thequack!white,
+      belly=black!\thequack!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \elephant[
+      body=black!\macro!white,
+      ears=black!\thequack!white,
+      hands=black!\thequack!white,
+      feet=black!\thequack!white,
+      belly=black!\thequack!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \elephant[
+      body=black!\macro!white,
+      ears=black!\thequack!white,
+      hands=black!\thequack!white,
+      feet=black!\thequack!white,
+      belly=black!\thequack!white,
+    ]
+\end{tikzpicture}
+}
+
+\end{document}

@@ -83,3 +83,15 @@ The full video is available from ...
   https://www.youtube.com/watch?v=WYeDsa4Tw0c&t=5s
   
 - Source Code: [./ulrike/finale/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/finale)
+
+## 7. African Night
+
+<img align="right" src="./samcarter/lion/lion.png" height="100">
+
+- Music: The Lion Sleeps Tonight Lyrics
+  https://www.youtube.com/watch?v=399syDv0bBM
+  
+- Image: manuzoli
+  https://pixabay.com/photos/namibia-wildlife-africa-etosha-2949409/
+
+- Source Code: [./samcarter/lion/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/lion)
