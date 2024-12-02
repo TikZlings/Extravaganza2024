@@ -2,7 +2,7 @@
 rm lion.mp4
 
 # convert to png images
-# pdftoppm -png -r 48 -progress -singlefil/e -f 310 lion.pdf lion
+pdftoppm -png -r 48 -progress -singlefile -f 310 lion.pdf lion
 pdftoppm -png -r 240 -progress lion.pdf lion
 
 # convert to video
@@ -16,6 +16,6 @@ HandBrakeCLI --crop 0:0:0:0  -i lion_raw.mp4 -o lion.mp4
 
 # clean up
 if [ -e "lion.mp4" ]; then
-  # rm lion-*.png
+  rm lion-*.png
   rm lion_raw.mp4
 fi
