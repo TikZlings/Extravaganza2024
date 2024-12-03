@@ -15,12 +15,13 @@
     },
 }
 
-\newcommand{\floatingduck}[2]{
+\newcommand{\floatingduck}[3]{
     \duck[
       scale=1.5,
       xscale=-1,
       yshift=#2-\insertoverlaynumber*0.04cm,
-      xshift=#1-\insertoverlaynumber*0.2cm
+      xshift=#1-\insertoverlaynumber*0.2cm,
+      mullet=#3
     ] 
 }
 
@@ -30,13 +31,13 @@
 \begin{frame}
   \begin{tikzpicture}[remember picture, overlay]
   
-    \floatingduck{4cm}{0cm}
-    \floatingduck{14cm}{1cm}
-    \floatingduck{20cm}{3cm}
-    \floatingduck{25cm}{5cm}
-    \floatingduck{35cm}{8cm}
-    \floatingduck{40cm}{9cm}
-    \floatingduck{50cm}{11cm}    
+    \floatingduck{4cm}{0cm}{red}
+    \floatingduck{14cm}{1cm}{blue}
+    \floatingduck{20cm}{3cm}{violet}
+    \floatingduck{25cm}{5cm}{cyan}
+    \floatingduck{35cm}{8cm}{orange}
+    \floatingduck{40cm}{9cm}{magenta}
+    \floatingduck{50cm}{11cm}{teal}    
 %    \floatingduck{65cm}{13cm}
 %    \floatingduck{73cm}{15cm}
 %    \floatingduck{90cm}{18cm}  
