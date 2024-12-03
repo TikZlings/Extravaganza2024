@@ -25,6 +25,8 @@ video_clips = [
   VideoFileClip("../samcarter/whitewaterride/whitewaterride.mp4").volumex(1.5),     
   VideoFileClip("../intermissions/paddington.mp4"),
   VideoFileClip("../samcarter/paddington/paddington.mp4"),       
+  VideoFileClip("../intermissions/lion.mp4"),
+  VideoFileClip("../samcarter/lion/lion.mp4"),      
   VideoFileClip("../intermissions/finale.mp4"),
   VideoFileClip("../ulrike/finale/finale.mp4"),  
   VideoFileClip("../intermissions/credits.mp4"),
