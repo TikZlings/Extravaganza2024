@@ -5,7 +5,7 @@ rm silentnight.mp4
 pdftoppm -png -r 240 -progress silentnight_repeat.pdf silentnight
 
 # convert to video
-ffmpeg  -ss 00:00:00 -i silentnight-%03d.png -ss 00:00:18 -i Margret_Almer_-_Stille_Nacht_heilige_Nacht_Jodel_Version_1997-G5wpQbTU1Ck.m4a -shortest silentnight_raw.mp4
+ffmpeg  -ss 00:00:00 -i silentnight-%03d.png -ss 00:00:08 -i Silent_Night_on_bagpipes_by_Ryan_Randall-Ryan_Randall-avB5oDsZvZ0.m4a -shortest silentnight_raw.mp4
 
 # repair video
 HandBrakeCLI --crop 0:0:0:0  -i silentnight_raw.mp4 -o silentnight.mp4
