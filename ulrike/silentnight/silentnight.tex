@@ -24,12 +24,13 @@
 \newcommand\bobblehat[2]{%
   \begin{scope}[shift={(-0.68,3)},scale=0.006,yscale=-1]
 \begin{scope}[yshift=-100]
-  \path[fill=#1] (47.9231,182.0769) -- (45.0000,179.1539) -- (45.0000,162.5000)
+  \path[clip] (47.9231,182.0769) -- (45.0000,179.1539) -- (45.0000,162.5000)
   -- (45.0000,145.8461) -- (47.9453,142.9008) -- (50.8907,139.9555) --
   (112.9180,140.2277) -- (174.9453,140.5000) -- (177.2227,142.7751) .. controls
   (179.3851,144.9355) and (179.5159,145.9071) .. (179.8160,162.0361) --
   (180.1320,179.0219) -- (177.1429,182.0109) -- (174.1539,185.0000) --
   (112.5000,185.0000) -- (50.8462,185.0000) -- cycle;
+  \node[] at (100,40){\includegraphics[width=5cm]{tartan3}};
 \end{scope}
 \path[fill=#2]  (56.5667,132.7500) ..
   controls (59.5944,107.7429) and (75.2960,83.7816) .. (94.5000,74.8622) ..
@@ -56,7 +57,7 @@
   (123.9741,71.8415) -- (129.6984,74.4622) .. controls (149.5630,83.5565) and
   (165.3543,107.3191) .. (168.4332,132.7500) -- (169.0689,138.0000) --
   (112.5000,138.0000) -- (55.9311,138.0000) -- (56.5667,132.7500) -- cycle;
-
+  %\node[] at (100,40){\includegraphics[width=5cm]{tartan3}};
 \end{scope}}
 \newcommand\candlescalefactor{3}
 
@@ -96,15 +97,11 @@
 \path[use as bounding box](-2cm,1cm) rectangle (0.5cm,2cm); 
 
 \node[inner sep=0pt]{ 
-		\ifnum \intmodnn{\thepage}{6} > 2
-			%\includegraphics[width=3cm]{mouse_close}%
-		\else
-			%\includegraphics[width=3cm]{mouse_open}%
-		\fi%
+\includegraphics[width=3cm,page=\numexpr\intmodnn{\value{page}}{6}+1]{bearbagpipe}%
 	};
- \begin{scope}[scale=1.3,xshift=-0.49cm,yshift=-1.3cm]\bobblehat{xkcdCloudyBlue}{xkcdDullBlue} \end{scope} 
+ \begin{scope}[scale=1.5,xshift=0.05cm,yshift=-1.3cm]\bobblehat{xkcdCloudyBlue}{xkcdDullBlue} \end{scope} 
 
- \begin{scope}[scale=1/\candlescalefactor,xshift=-0.2cm,yshift=-3cm]
+ \begin{scope}[scale=1/\candlescalefactor,xshift=-5.2cm,yshift=-3cm]
 \pgfmathsetseed{10} 
 %\foreach \n in {1,...,10}{ 
 %  \tikzset{xshift=\fpeval{\candlescalefactor*(\n-0.8)/\duckscolumns}\textwidth}%
@@ -131,10 +128,4 @@
 
 
 \end{document}
-
-\begin{scope}
-  \path[clip]
-  \duckpathjacket;
-  \node[anchor=south west] at (0,0){\includegraphics[width=3cm]{tartan3}};
- \end{scope}
 
