@@ -1,0 +1,32 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{tikzlings}
+
+\newcounter{quack}
+
+\begin{document}
+
+\foreach \macro in {90,...,61}{
+  \setcounter{quack}{\macro}
+  \addtocounter{quack}{-10}
+
+\begin{tikzpicture}
+    \hippo[
+      body=black!\macro!white,
+      eye=darkgray!\macro!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \hippo[
+      body=black!\macro!white,
+      eye=darkgray!\macro!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \hippo[
+      body=black!\macro!white,
+      eye=darkgray!\macro!white,
+    ]
+\end{tikzpicture}
+}
+
+\end{document}

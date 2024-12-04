@@ -1,0 +1,42 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{tikzlings}
+
+\newcounter{quack}
+
+\makeatletter
+\newcommand{\apehookbody}{
+  \fill[\ape@mouth,line width=\scalingfactor*0.4pt] (0.125, 1.5) arc [start angle=-50, end angle=-130, radius=0.2] -- cycle ;
+}
+\makeatother
+
+\begin{document}
+
+\foreach \macro in {90,...,61}{
+  \setcounter{quack}{\macro}
+  \addtocounter{quack}{-10}
+
+\begin{tikzpicture}
+    \ape[
+      body=black!\macro!white,
+      skin=black!90!white!\macro!white,
+      muzzle=black!85!white!\macro!white,
+      openmouth
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \ape[
+      body=black!\macro!white,
+      skin=black!90!white!\macro!white,
+      muzzle=black!85!white!\macro!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \ape[
+      body=black!\macro!white,
+      skin=black!90!white!\macro!white,
+      muzzle=black!85!white!\macro!white,
+    ]
+\end{tikzpicture}
+}
+
+\end{document}
