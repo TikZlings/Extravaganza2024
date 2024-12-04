@@ -95,3 +95,15 @@ The full video is available from ...
   https://pixabay.com/photos/namibia-wildlife-africa-etosha-2949409/
 
 - Source Code: [./samcarter/lion/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/lion)
+
+## 8. Silent Night
+
+<img align="right" src="./ulrike/silentnight/silentnight.png" height="100">
+
+- Music: Silent Night on bagpipes by Ryan Randall
+  https://www.youtube.com/watch?v=avB5oDsZvZ0
+  
+- Image: ArturGórecki
+  https://pixabay.com/de/photos/schnee-winter-berge-haus-heimat-3373432/
+  
+- Source Code: [./ulrike/silentnight/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/silentnight)
