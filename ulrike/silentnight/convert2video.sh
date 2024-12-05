@@ -14,5 +14,5 @@ HandBrakeCLI --crop 0:0:0:0  -i silentnight_raw.mp4 -o silentnight.mp4
 # clean up
 if [ -e "silentnight.mp4" ]; then
   rm silentnight-*.png
-  rm silentnight.mp4
+  rm silentnight_raw.mp4
 fi
