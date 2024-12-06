@@ -1,0 +1,108 @@
+% modified from https://tex.my/category/calendar/
+% many thanks to LianTze Lim for creating the template!
+\documentclass[20pt,british,giant]{cdcalendar}% https://github.com/liantze/cdcalendar
+
+\usetikzlibrary{matrix}
+\usepackage[rm,t]{roboto}
+\usepackage{graphicx}
+
+\dayHeadingStyle{font=\sffamily\color{gray!90}}
+\monthTitleStyle{font={\fontsize{48pt}{50pt}\bfseries}, red!50!RedViolet}
+\setlength{\CalPageMargin}{0.75cm}
+\sundayColor{red!60!black}
+\colorlet{titlescolour}{Emerald!30!RoyalBlue}
+\tikzset{monthTitleOptions/.append style={text=titlescolour}}
+\tikzset{every calendar/.append style={day yshift=2.25em}}
+\captionStyle{align=flush left,font={\fontsize{48pt}{50pt}\bfseries\color{red!60!black}}}
+\eventStyle{\tiny}
+
+\tikzset{
+  page/.style={}
+}
+
+\tikzset{default mark/.style={circle,inner sep=0.6em,fill=titlescolour!20}}
+
+\renewcommand{\illustration}[3][]{%
+  \clearpage
+  \tikz\node[rectangle split, rectangle split parts=2,
+    rectangle split part align={left,left},
+    text width=#2,inner xsep=0pt, inner ysep=1pt, illusCaptionOptions]
+  {#1\strut \nodepart{second}\includegraphics[width=#2]{#3}};\par
+  \vspace*{0.1cm}%
+}
+\makeatother
+
+\begin{document}
+
+\illustration[test]{\textwidth}{example-image-duck}
+\begin{monthCalendar}{2025}{01}
+\event{2025-01-10}{}{Birthday Donald Knuth}
+\event{2025-01-13}{}{National Rubber Duck Day}
+\end{monthCalendar}
+
+\illustration[Bat Bear]{\textwidth,page=500}{../samcarter/batbear/batbear}
+\begin{monthCalendar}{2025}{02}
+\event{2025-02-01}{}{TeXLive'25 test build begin}
+\event{2025-02-06}{}{GUTenberg: Exposé sur le thème beamer Gotham}
+\event{2025-02-08}{}{TeXLive'25 pretest start}
+\event{2025-02-22}{}{TeXLive'25 code freeze}
+\end{monthCalendar}
+
+\illustration[White Water Ride]{\textwidth,page=136}{../samcarter/whitewaterride/whitewaterride}
+\begin{monthCalendar}{2025}{03}
+\event{2025-03-01}{}{TUG election, nominations due}
+\event{2025-03-01}{}{final updates from CTAN for TeXLive'25}
+\event{2025-03-08}{}{TeXLive'25 release}
+\event{2025-03-21}{}{TUGboat 46:1, submission deadline}
+\end{monthCalendar}
+
+\illustration[test]{\textwidth}{example-image-duck}
+\begin{monthCalendar}{2025}{04}
+\event{2025-04-03}{2025-04-05}{Dante'25 @ Darmstadt}
+\event{2025-04-29}{2025-05-04}{BachoTEX 2025}
+\end{monthCalendar}
+
+\illustration[African Night]{\textwidth,page=310}{../samcarter/lion/lion}
+\begin{monthCalendar}{2025}{05}
+\event{2025-04-29}{2025-05-04}{BachoTEX 2025}
+\event{2025-05-25}{}{Towel Day}
+\end{monthCalendar}
+
+\illustration[Flower Power]{\textwidth,page=1}{../samcarter/flowerpower/flowerpower}
+\begin{monthCalendar}{2025}{06}
+\event{2025-06-23}{}{National Typewriter Day}
+\end{monthCalendar}
+
+\illustration[test]{\textwidth}{example-image-duck}
+\begin{monthCalendar}{2025}{07}
+\event{2025-07-18}{2025-07-20}{TUG'25 @ Trivandrum}
+\event{2025-07-07}{}{TUGboat 46:2, submission deadline}
+\end{monthCalendar}
+
+\illustration[Unstoppable]{\textwidth,page=1}{../samcarter/unstoppable/unstoppable}
+\begin{monthCalendar}{2025}{08}
+\event{2025-08-20}{}{International Hawaiian Pizza Day}
+\event{2025-08-22}{2025-08-29}{19th International ConTEXt Meeting @  Chmielno}
+\end{monthCalendar}
+
+\illustration[Abbey Road]{\textwidth,page=300}{../samcarter/abbeyroad/abbeyroad}
+\begin{monthCalendar}{2025}{09}
+\event{2025-09-19}{}{Talk Like a Pirate Day}
+\end{monthCalendar}
+
+\illustration[Paddington]{\textwidth,page=1}{../samcarter/paddington/paddington}
+\begin{monthCalendar}{2025}{10}
+\event{2025-10-16}{}{Global Cat Day}
+\end{monthCalendar}
+
+\illustration[Finale]{\textwidth,page=555}{../ulrike/finale/finale}
+\begin{monthCalendar}{2025}{11}
+\event{2025-11-07}{}{Hug a Bear Day}
+\end{monthCalendar}
+
+\illustration[Silent Night]{\textwidth,page=10}{../ulrike/silentnight/silentnight}
+\begin{monthCalendar}{2025}{12}
+\event{2025-12-08}{}{Pretend To Be A Time Traveler Day}
+\end{monthCalendar}
+
+\end{document}
