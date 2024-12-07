@@ -107,3 +107,15 @@ The full video is available from ...
   https://pixabay.com/de/photos/schnee-winter-berge-haus-heimat-3373432/
   
 - Source Code: [./ulrike/silentnight/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/silentnight)
+
+## 9. Feliz Navidad
+
+<img align="right" src="./carla/mariachi/mariachi.png" height="100">
+
+- Music: The Mariachis - Feliz Navidad
+  https://www.youtube.com/watch?v=C9QHtOnEIHk
+  
+- Image: john_Ioannidis
+  https://pixabay.com/photos/road-trees-snow-cold-ice-frost-4730553/
+  
+- Source Code: [./carla/mariachi/](https://github.com/TikZlings/Extravaganza2024/tree/main/carla/mariachi)
