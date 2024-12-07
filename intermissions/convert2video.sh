@@ -73,14 +73,15 @@ repeatconvert(){
 }
 
 # Converting
-repeatconvert title "./extravaganza-titlepage.pdf" 101
-convert2video flowerpower "Flower Power"
-convert2video batbear "Bat Bär"
-convert2video unstoppable "Unstoppable"
-convert2video abbeyroad "Abbey Road"
-convert2video whitewaterride "White Water Ride"
-convert2video paddington "Paddington"
-convert2video lion "African Night"
-convert2video silentnight "Silent Night"
-convert2video finale "Finale"
-repeatconvert credits "./extravaganza-credits.pdf" 150
+# repeatconvert title "./extravaganza-titlepage.pdf" 101
+# convert2video flowerpower "Flower Power"
+# convert2video batbear "Bat Bär"
+# convert2video unstoppable "Unstoppable"
+# convert2video abbeyroad "Abbey Road"
+# convert2video whitewaterride "White Water Ride"
+# convert2video paddington "Paddington"
+# convert2video lion "African Night"
+# convert2video silentnight "Silent Night"
+convert2video mariachi "Feliz Navidad"
+# convert2video finale "Finale"
+# repeatconvert credits "./extravaganza-credits.pdf" 150
