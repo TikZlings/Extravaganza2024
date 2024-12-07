@@ -1,0 +1,193 @@
+\documentclass[margin=7pt,tikz]{standalone}
+
+\usepackage{tikzlings}
+\usetikzlibrary{positioning}
+\usetikzlibrary{intersections}
+\usetikzlibrary{backgrounds} 
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.shapes, shapes.geometric}
+\usetikzlibrary{decorations.markings}
+
+\colorlet{mycyan}{cyan!30!white} 
+\colorlet{myorange}{orange!70!yellow} 
+\colorlet{myyellow}{orange!45!yellow} 
+\colorlet{mygreen}{green!70!blue} 
+\colorlet{mybrown}{brown!75!black} 
+
+% trick taken from https://topanswers.xyz/tex?q=1989
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+    sombrero/.pic={
+        \draw[myorange, fill=myorange] (-.45,0) to[in=200] (0,.9) to[out=-20] (.45,0) -- cycle;
+        \draw[preaction={draw,line width=3mm,red}]
+            [line width=2mm,myorange](-.8,-0.1) to[bend left] (.8,-0.1);
+        \draw[decorate,decoration={zigzag, amplitude=.6mm,
+            segment length=2mm},mygreen,
+            line width=.4mm] (-.8,-0.1) to[bend left] (.8,-0.1);
+        \begin{scope}
+            \clip (-.45,0) to[in=200] (0,.9) to[out=-20] (.45,0) -- cycle;
+            \draw[decorate,decoration={zigzag, 
+                segment length=1mm,
+                amplitude=.3mm},mygreen,
+                line width=.5mm] (-.4,0.5) to[bend left] (.4,0.5);  
+            \draw[decorate,decoration={shape backgrounds,shape=circle,
+                shape size=.7mm, shape sep=1mm}, blue, fill=blue] (-.4,.7) to[bend left] (.4,.7);  
+            \draw[decorate,decoration={shape backgrounds,shape=circle,
+              shape size=.7mm, shape sep=1mm}, blue, fill=blue] (-.4,.3) to[bend left] (.4,.3);  
+        \end{scope}
+    },
+		% chiratta e chitarrone
+		guitar/.pic={
+        % corpo
+        \node[fill=mybrown,circle, minimum width=6mm, xshift=1mm] (sopram) {};
+        \node[fill=mybrown,circle, minimum width=8mm, below=-2mm of sopram, xshift=1mm] (sottom) {};
+        \node[fill=myyellow,circle, minimum width=6mm] (sopraa) {};
+        \node[fill=myyellow,circle, minimum width=8mm, below=-2mm of sopraa] (sottoa) {};
+        % manico
+	      \node[fill=mybrown, inner xsep=1mm, minimum height=1.6cm, anchor=south, xshift=.5mm] at (sopraa.center) {};
+        \node[fill=myyellow,circle, minimum width=6mm] {};
+        \node[fill=orange, inner xsep=1mm, minimum height=1.6cm, anchor=south] (manico) at (sopraa.center) {};
+        \filldraw[mybrown] (sottoa.south) -- ++(.1,.1) -- (sottom.south); 
+        \node[fill=myyellow,circle, minimum width=8mm, below=-2mm of sopraa] {};
+				% buca
+        \node[fill=red,circle, inner sep=1.2mm] at ([yshift=2mm]sopraa.south) {};         
+				\node[fill=mybrown,circle, inner sep=1mm] at ([yshift=2mm]sopraa.south) {};
+				% ponte
+        \filldraw[mybrown] ([yshift=3mm, xshift=-1.1mm]sottoa.south) -- ([yshift=3mm, xshift=1.1mm]sottoa.south) to [bend left] cycle;
+				% meccaniche
+        \filldraw[mybrown] ([xshift=-.5mm]manico.north west) to [bend left] ([xshift=1.1mm]manico.north east) -- ([xshift=.6mm,yshift=-3mm]manico.north east)  -- ([xshift=-.1mm,yshift=-3mm]manico.north west) -- cycle; 
+        \filldraw[orange] ([xshift=-.5mm]manico.north west) to [bend left] ([xshift=.5mm]manico.north east) -- ([xshift=.1mm,yshift=-3mm]manico.north east)  -- ([xshift=-.1mm,yshift=-3mm]manico.north west) -- cycle; 
+        \foreach \myyshift/\myxshift/\myname in {.3/.3/1,1.1/.2/2,1.9/.1/3}{
+            \node[fill=myyellow, inner sep=.2mm, minimum width=2.1mm, xshift=-1*\myxshift mm] at ([yshift=-1*\myyshift mm]manico.north west) (mecw\myname) {};
+            \node[circle,fill=myyellow, inner sep=.25mm,] at (mecw\myname.west) {};
+            \node[fill=myyellow, inner sep=.2mm, minimum width=2.1mm, xshift=\myxshift mm] (mece\myname) at ([yshift=-1*\myyshift mm]manico.north east) {};
+            \node[circle,fill=myyellow, inner sep=.25mm,] at (mece\myname.east) {};
+        }
+        % corde
+        \foreach \myshift/\myname in {.1/3,.3/2,.5/1}{
+            \draw[mybrown, very thin] ([ xshift=\myshift mm]mece\myname.west) -- ([yshift=3mm, xshift=\myshift mm]sottoa.south);
+            \draw[mybrown, very thin] ([ xshift=-1*\myshift mm]mecw\myname.east) -- ([yshift=3mm, xshift=-1*\myshift mm]sottoa.south);
+        }
+    },
+    % tromba
+    trumpet/.pic={
+        \node[ellipse, draw=brown, fill=myyellow, 
+            inner sep=0pt, minimum width=1mm, minimum height=1.7mm] {};
+        \draw[myyellow, rounded corners, line width=1mm] (0,0) -- 
+				    ++(.7,0) coordinate (primacurva) -- 
+				    ++(0,-.27) coordinate (sotto) -- ++(-.5,0) -- ++(0,.27) coordinate (curva) --
+            ++(.81,0) coordinate (fine);
+        \begin{scope}
+            \clip ([xshift=-.5mm, yshift=-.5mm]curva) -- ++(2mm,0) -- ++(0,1mm) -- ++(-2mm,0) -- cycle;
+            \draw[rounded corners=5, brown, very thin] ([xshift=-.5mm, yshift=-.5mm]sotto) -- ++(-.5,0) -- ++(0,.37) -- ([yshift=.5mm]fine);
+        \end{scope} 
+        \draw[brown, very thin] ([xshift=-1.3mm, yshift=-.5mm]primacurva) -- ++(1.6mm,0);
+        \begin{scope}[even odd rule]
+            \clip (0,-.5mm) rectangle (.5mm,.5mm);
+            \node[ellipse, draw=brown,        inner sep=0pt, minimum width=1mm, minimum height=1.7mm, xshift=.8mm] {};
+        \end{scope}
+        % campana
+        \draw[myyellow, fill=myyellow] (fine) -- ++(0,.15) to[bend left=15] 
+				    ++(-.4,-.15) to[bend left=15] ++(.4,-.15) -- cycle;
+        \node[ellipse, draw=brown, fill=myyellow, inner sep=0pt, minimum width=2mm, minimum height=4mm, xshift=.2mm] at (fine) {};
+        \node[ellipse, draw=mybrown, fill=mybrown, inner sep=0pt, minimum width=.7mm, minimum height=2.7mm, xshift=.2mm] at (fine) {}; 
+        % pompe e pistoni
+				\foreach \myshift in {-1.5,-2.5,-3.5}{
+						\node[draw=mybrown, very thin, fill=myyellow, inner sep=0pt, 
+						    minimum width=.7mm, minimum height=4.5mm] 
+								(pistone) at ([xshift=\myshift mm, yshift=-1.5mm]primacurva) {};
+						\node[draw=myyellow, fill=myyellow, inner sep=0pt, 
+						    minimum width=.3mm, minimum height=.3mm, anchor=south] 
+								(astina) at (pistone.north) {};
+						\node[draw=mybrown, fill=myyellow, inner sep=0pt, 
+						    minimum width=.7mm, minimum height=.3mm, anchor=south, ellipse] 
+						   (pomello) at (astina.north) {};
+				}
+    },
+    % fisarmonica
+    accordion/.pic={
+      % tastiera
+      \node[draw=mybrown, fill=mybrown, minimum width=2mm, minimum height=9mm, rotate=15] (retrotastiera) {};
+      \node[draw=mybrown, very thin,
+          fill=white, minimum width=1mm, minimum height=7mm, rotate=15] (tastiera) {};
+      % tasti
+      \foreach \myshift in {.7, 1.4, ..., 7}
+      {\draw[mybrown, very thin, rotate=15] ([yshift=\myshift mm]tastiera.south east)  -- ([yshift=\myshift mm]tastiera.south west);}
+      \foreach \myshift in {.8, 1.6, 2.7, 3.5, 4.3, 5.4, 6.2} {
+      \node[fill=black, rotate=15, minimum width=3.5mm, minimum height=.3mm, inner sep=0pt, yshift=\myshift mm] at (tastiera.south east) {};}
+      % mantice
+      \node[draw=mybrown, fill=mybrown, anchor=west, minimum width=3mm, minimum height=1cm, rotate=15] (fiancotastiera) at (retrotastiera.east) {};
+      \node[draw=mybrown, fill=mybrown, minimum width=3mm, xshift=12mm, minimum height=1cm, rotate=-20] (bassi) {};
+      \draw[draw=mybrown, fill=myyellow, name path=zigozago] 
+          (fiancotastiera.north east) 
+          decorate [decoration={zigzag, segment length=3pt, amplitude=1pt}, bend left] 
+          { to (bassi.north west) } to (bassi.south west) decorate [decoration={zigzag, segment length=1.1pt, amplitude=1pt}, bend right] 
+          { to (fiancotastiera.south east) } -- cycle; 
+      \path[name path=alto] 
+          ([yshift=.8pt]fiancotastiera.north east) 
+          to[bend left] ([yshift=.8pt]bassi.north west) ; 
+      \begin{scope}
+        \clip (fiancotastiera.north east) 
+          decorate [decoration={zigzag, segment length=3pt, amplitude=1pt}, bend left] 
+          { to (bassi.north west) } to (bassi.south west) decorate [decoration={zigzag, segment length=1.1pt, amplitude=1pt}, bend right] 
+          { to (fiancotastiera.south east) } -- cycle; 
+        \draw [mybrown, name intersections={of=alto and zigozago,sort by=alto,total=\t}] 
+        \foreach \i in {1,...,\t} { (7.2mm,-10mm) -- (intersection-\i) };
+      \end{scope}
+      % bassi
+      \foreach \myxshift in {.7,2.4}
+        {
+				\foreach \myyshift in {3.5, 8.5, ..., 26.5}
+          \node[circle, rotate=-20, fill=white, inner sep=0pt, minimum size=.7mm, xshift=\myxshift mm, yshift=\myyshift] at (bassi.south west) {};
+        }
+      \foreach \myyshift in {6, 11, ..., 27}
+        \node[circle, rotate=-20, fill=white, inner sep=0pt, minimum size=.7mm, xshift=1.55 mm, yshift=\myyshift] at (bassi.south west) {};
+    },
+    guitarronmarmot/.pic={
+        \marmot[leftstep]
+        \pic[yshift=1.9cm, rotate=15] {sombrero};      
+				\pic[yshift=1cm, rotate=-30, transform shape,overlay] {guitar};
+    },	
+	  guitarronmarmot/.pic={
+        \marmot[leftstep]
+        \pic[yshift=1.9cm, rotate=15] {sombrero};      
+ 				\pic[yshift=1cm, rotate=-30, transform shape, scale=1.1,overlay] {guitar};
+    },
+    guitarmarmot/.pic={
+        \marmot[leftstep]
+        \pic[yshift=1.9cm, rotate=-15] {sombrero};
+				\pic[yshift=1cm, rotate=-30, transform shape, scale=.9,overlay] {guitar};
+		},
+    trumpetmarmot/.pic={
+        \marmot[leftstep]
+        \pic[yshift=1.9cm] {sombrero};      
+				\pic[yshift=1.4cm, rotate=-30, transform shape,overlay] {trumpet};
+    },
+    accordionmarmot/.pic={
+     \marmot[leftstep]
+        \pic[yshift=1.9cm] {sombrero};
+        \pic[yshift=9mm, xshift=-6mm,overlay] {accordion};      
+    },
+  }
+
+\begin{document}
+
+\begin{tikzpicture}
+\pic {guitarronmarmot};
+\end{tikzpicture}
+\begin{tikzpicture}
+\pic {accordionmarmot};
+\end{tikzpicture}
+\begin{tikzpicture}
+\pic {trumpetmarmot};
+\end{tikzpicture}
+\begin{tikzpicture}
+\pic {guitarmarmot};
+\end{tikzpicture}
+
+\end{document}

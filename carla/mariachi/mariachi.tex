@@ -31,6 +31,19 @@
     },
 }
 
+\usepackage{xfp}
+\ExplSyntaxOn
+\let\intmodnn\int_mod:nn
+\ExplSyntaxOff
+
+\newcommand{\isopen}{%
+\ifnum \intmodnn{\thepage}{20} > 10
+  _left
+\else
+  _right
+\fi
+}
+
 \begin{document}
 \begin{frame}
   \def\steps{500}
@@ -43,10 +56,10 @@
       decoration={markings,
       mark=at position .7*\thepage/\steps
       with {
-        \node[anchor=south, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=1]{funny_marmots}};
-        \node[anchor=south,xshift=2cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=2]{funny_marmots}};
-        \node[anchor=south,xshift=4cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=3]{funny_marmots}};
-        \node[anchor=south,xshift=6cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=4]{funny_marmots}};    
+        \node[anchor=south, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=1]{funny_marmots\isopen}};
+        \node[anchor=south,xshift=2cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=2]{funny_marmots\isopen}};
+        \node[anchor=south,xshift=4cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=3]{funny_marmots\isopen}};
+        \node[anchor=south,xshift=6cm, transform shape={scale=.7+\thepage/\steps}, transform canvas={scale=.7+\thepage/\steps}] {\includegraphics[page=4]{funny_marmots\isopen}};    
       }}]
       (6,-4) to[out=-10, in=0] (-3,-2.9);
      \end{tikzpicture}
