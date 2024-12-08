@@ -63,7 +63,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/whitewaterride/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/whitewaterride)
 
-## 5. Paddington
+## 6. Paddington
 
 <img align="right" src="./samcarter/paddington/paddington.png" height="100">
 
@@ -75,7 +75,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/paddington/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/paddington)
 
-## 6. Finale
+## 7. Finale
 
 <img align="right" src="./ulrike/finale/finale.png" height="100">
 
@@ -84,7 +84,7 @@ The full video is available from ...
   
 - Source Code: [./ulrike/finale/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/finale)
 
-## 7. African Night
+## 8. African Night
 
 <img align="right" src="./samcarter/lion/lion.png" height="100">
 
@@ -96,7 +96,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/lion/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/lion)
 
-## 8. Silent Night
+## 9. Silent Night
 
 <img align="right" src="./ulrike/silentnight/silentnight.png" height="100">
 
@@ -108,7 +108,7 @@ The full video is available from ...
   
 - Source Code: [./ulrike/silentnight/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/silentnight)
 
-## 9. Feliz Navidad
+## 10. Feliz Navidad
 
 <img align="right" src="./carla/mariachi/mariachi.png" height="100">
 
@@ -120,7 +120,7 @@ The full video is available from ...
   
 - Source Code: [./carla/mariachi/](https://github.com/TikZlings/Extravaganza2024/tree/main/carla/mariachi)
 
-## 10. Exciting times
+## 11. Exciting times
 
 <img align="right" src="./carla/excitingtimes/excitingtimes.png" height="100">
 
