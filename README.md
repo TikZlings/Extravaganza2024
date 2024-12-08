@@ -119,3 +119,15 @@ The full video is available from ...
   https://pixabay.com/photos/road-trees-snow-cold-ice-frost-4730553/
   
 - Source Code: [./carla/mariachi/](https://github.com/TikZlings/Extravaganza2024/tree/main/carla/mariachi)
+
+## 10. Exciting times
+
+<img align="right" src="./carla/excitingtimes/excitingtimes.png" height="100">
+
+- Music: The Pointer Sisters - I'm So Excited 
+  https://www.youtube.com/watch?v=5qFb0_JUjE8
+  
+- Image: Pexels
+  https://pixabay.com/photos/christmas-background-christmas-1869902/
+  
+- Source Code: [./carla/excitingtimes/](https://github.com/TikZlings/Extravaganza2024/tree/main/carla/excitingtimes)

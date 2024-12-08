@@ -82,6 +82,7 @@ repeatconvert(){
 # convert2video paddington "Paddington"
 # convert2video lion "African Night"
 # convert2video silentnight "Silent Night"
-convert2video mariachi "Feliz Navidad"
+# convert2video mariachi "Feliz Navidad"
+convert2video excitingtimes "Exciting times"
 # convert2video finale "Finale"
 # repeatconvert credits "./extravaganza-credits.pdf" 150
