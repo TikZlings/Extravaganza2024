@@ -1,0 +1,41 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{tikzlings}
+
+\newcounter{quack}
+
+\begin{document}
+
+\foreach \macro in {90,...,61}{
+  \setcounter{quack}{\macro}
+  \addtocounter{quack}{-10}
+
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+    \fill[black!\macro!white!50!black]  (0.154, 1.7201).. controls (0.1005, 1.5732) and (-0.1072, 1.5798) .. (-0.155, 1.7201).. controls (-0.1351, 1.6616) and (-0.0412, 1.6415) .. (0.0, 1.6871).. controls (0.0412, 1.6415) and (0.1351, 1.6616) .. (0.154, 1.7201) -- cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+    \fill[black!\macro!white!50!black]  (0.154, 1.7201).. controls (0.1005, 1.5732) and (-0.1072, 1.5798) .. (-0.155, 1.7201).. controls (-0.1351, 1.6616) and (-0.0412, 1.6415) .. (0.0, 1.6871).. controls (0.0412, 1.6415) and (0.1351, 1.6616) .. (0.154, 1.7201) -- cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+    \fill[black!\macro!white!50!black]  (0.154, 1.7201).. controls (0.1005, 1.5732) and (-0.1072, 1.5798) .. (-0.155, 1.7201).. controls (-0.1351, 1.6616) and (-0.0412, 1.6415) .. (0.0, 1.6871).. controls (0.0412, 1.6415) and (0.1351, 1.6616) .. (0.154, 1.7201) -- cycle;
+\end{tikzpicture}
+}
+
+\end{document}

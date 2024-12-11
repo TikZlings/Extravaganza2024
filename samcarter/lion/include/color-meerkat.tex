@@ -1,0 +1,38 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{tikzlings}
+
+\newcounter{quack}
+
+\begin{document}
+
+\foreach \macro in {90,...,61}{
+  \setcounter{quack}{\macro}
+  \addtocounter{quack}{-10}
+
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+\end{tikzpicture}
+\begin{tikzpicture}
+    \meerkat[
+      body=black!\macro!white,
+      upperbody=black!90!white!\macro!white,
+      chest=black!80!white!\macro!white,
+      muzzle=black!80!white!\macro!white,
+    ]
+\end{tikzpicture}
+}
+
+\end{document}
