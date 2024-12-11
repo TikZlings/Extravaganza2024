@@ -73,7 +73,7 @@ repeatconvert(){
 }
 
 # Converting
-repeatconvert title "./extravaganza-titlepage.pdf" 101
+# repeatconvert title "./extravaganza-titlepage.pdf" 101
 # convert2video flowerpower "Flower Power"
 # convert2video batbear "Bat Bär"
 # convert2video unstoppable "Unstoppable"
@@ -84,5 +84,6 @@ repeatconvert title "./extravaganza-titlepage.pdf" 101
 # convert2video silentnight "Silent Night"
 # convert2video mariachi "Feliz Navidad"
 # convert2video excitingtimes "Exciting times"
+convert2video joy "Joy to the world"
 # convert2video finale "Finale"
 # repeatconvert credits "./extravaganza-credits.pdf" 150
