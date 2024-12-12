@@ -73,9 +73,9 @@ repeatconvert(){
 }
 
 # preview images
-pdftoppm -png -r 48 -progress -singlefile extravaganza-titlepage.pdf icon_small
-pdftoppm -png -r 100 -progress -singlefile extravaganza-titlepage.pdf icon_medium
-pdftoppm -png -r 150 -progress -singlefile extravaganza-titlepage.pdf icon_large
+# pdftoppm -png -r 48 -progress -singlefile extravaganza-titlepage.pdf icon_small
+# pdftoppm -png -r 100 -progress -singlefile extravaganza-titlepage.pdf icon_medium
+# pdftoppm -png -r 150 -progress -singlefile extravaganza-titlepage.pdf icon_large
 
 # Converting
 # repeatconvert title "./extravaganza-titlepage.pdf" 101
@@ -92,4 +92,4 @@ pdftoppm -png -r 150 -progress -singlefile extravaganza-titlepage.pdf icon_large
 # convert2video lion "Meanwhile in Africa..."
 # convert2video silentnight "Silent Night"
 # convert2video finale "Grand Finale"
-# repeatconvert credits "./extravaganza-credits.pdf" 150
+repeatconvert credits "./extravaganza-credits.pdf" 150
