@@ -72,19 +72,24 @@ repeatconvert(){
         
 }
 
+# preview images
+pdftoppm -png -r 48 -progress -singlefile extravaganza-titlepage.pdf icon_small
+pdftoppm -png -r 100 -progress -singlefile extravaganza-titlepage.pdf icon_medium
+pdftoppm -png -r 150 -progress -singlefile extravaganza-titlepage.pdf icon_large
+
 # Converting
-repeatconvert title "./extravaganza-titlepage.pdf" 101
-convert2video excitingtimes "Exciting Times"
-convert2video unstoppable "Unstoppable"
-convert2video flowerpower "Flower Power"
-convert2video mariachi "Mariachi Marmots"
-convert2video paddington "Paddington"
-convert2video joy "Joy to the World"
-convert2video commercial "Commercial Break"
-convert2video batbear "Batbär"
-convert2video abbeyroad "Abbey Road 2.0"
-convert2video whitewaterride "White Water Fun"
-convert2video lion "Meanwhile in Africa..."
-convert2video silentnight "Silent Night"
-convert2video finale "Grand Finale"
-repeatconvert credits "./extravaganza-credits.pdf" 150
+# repeatconvert title "./extravaganza-titlepage.pdf" 101
+# convert2video excitingtimes "Exciting Times"
+# convert2video unstoppable "Unstoppable"
+# convert2video flowerpower "Flower Power"
+# convert2video mariachi "Mariachi Marmots"
+# convert2video paddington "Paddington"
+# convert2video joy "Joy to the World"
+# convert2video commercial "Commercial Break"
+# convert2video batbear "Batbär"
+# convert2video abbeyroad "Abbey Road 2.0"
+# convert2video whitewaterride "White Water Fun"
+# convert2video lion "Meanwhile in Africa..."
+# convert2video silentnight "Silent Night"
+# convert2video finale "Grand Finale"
+# repeatconvert credits "./extravaganza-credits.pdf" 150
