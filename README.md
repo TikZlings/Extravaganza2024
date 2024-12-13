@@ -154,3 +154,13 @@ The full video is available from ...
   https://pixabay.com/de/photos/trivandrum-5037425/
   
 - Source Code: [./ulrike/india/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/india) 
+
+## 14. 
+
+<img align="right" src="./ulrike/tagging-factory/tagging-factory.png" height="100">
+
+- Music: 
+  
+- Image: Ulrike & Gert Fischer  
+  
+- Source Code: [./ulrike/tagging-factory/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/tagging-factory) 
