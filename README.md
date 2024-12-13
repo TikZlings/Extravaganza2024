@@ -1,8 +1,13 @@
+
+
 # The Great TikZlings Christmas Extravaganza 2024
 
 This repository contains the souce code of the Great TikZlings Extravanganza 2024, brought to you by [Ulrike](https://github.com/u-fischer) & [Gert Fischer](https://github.com/g-fischer), [Carla Maggi](https://github.com/CarLaTeX), [Paulo Cereda](https://github.com/cereda) and [samcarter](https://github.com/samcarter).
 
-The full video is available from ...
+The full video is available from https://vimeo.com/1038963018
+
+[![](./intermissions/icon_large.png)](https://vimeo.com/1038963018)
+
 
 ## 1. Exciting Times
 
