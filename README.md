@@ -132,7 +132,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/whitewaterride/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/whitewaterride)
 
-## 12. Meanwhile in Africa
+## 12. Meanwhile in Africa...
 
 <img align="right" src="./samcarter/lion/lion.png" height="100">
 
