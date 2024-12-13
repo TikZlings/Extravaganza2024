@@ -136,9 +136,21 @@ The full video is available from ...
 
 <img align="right" src="./ulrike/joy/joy.png" height="100">
 
-- Joy To The World The Bach Choir Lyrics
+- Music: Joy To The World The Bach Choir Lyrics
   https://www.youtube.com/watch?v=cr8myPmEpWw
   
 - Image: Ulrike & Gert Fischer  
   
 - Source Code: [./ulrike/joy/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/joy) 
+
+## 13. Commercial Break
+
+<img align="right" src="./ulrike/india/india.png" height="100">
+
+- Music: Signature Video | Kerala Tourism | Experience God’s Own Country 
+  https://www.youtube.com/watch?v=R83BlU5nnbs 
+  
+- Image: harikrishnanndd
+  https://pixabay.com/de/photos/trivandrum-5037425/
+  
+- Source Code: [./ulrike/india/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/india) 
