@@ -75,7 +75,18 @@ The full video is available from ...
   
 - Source Code: [./ulrike/joy/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/joy) 
 
-## 7. Commercial Break
+## 7. Tagging the World
+
+<img align="right" src="./ulrike/tagging-factory/tagging-factory.png" height="100">
+
+- Music: Thomas d‘Urfey - Old MacDonald
+  https://www.youtube.com/watch?v=m5R8hNADGmY
+  
+- Image: Ulrike & Gert Fischer  
+  
+- Source Code: [./ulrike/tagging-factory/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/tagging-factory) 
+
+## 8. Commercial Break
 
 <img align="right" src="./ulrike/india/india.png" height="100">
 
@@ -87,7 +98,7 @@ The full video is available from ...
   
 - Source Code: [./ulrike/india/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/india) 
 
-## 8. Batbär
+## 9. Batbär
 
 <img align="right" src="./samcarter/batbear/batbear.png" height="100">
 
@@ -98,7 +109,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/batbear/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/batbear)
 
-## 9. Abbey Road 2.0
+## 10. Abbey Road 2.0
 
 <img align="right" src="./samcarter/abbeyroad/abbeyroad.png" height="100">
 
@@ -109,16 +120,6 @@ The full video is available from ...
   https://en.wikipedia.org/wiki/File:Abbey_Road_zebra_crossing,_London_2007-03-31.jpg
 
 - Source Code: [./samcarter/abbeyroad/](https://github.com/TikZlings/Extravaganza2024/tree/main/samcarter/abbeyroad)
-
-## 10. 
-
-<img align="right" src="./ulrike/tagging-factory/tagging-factory.png" height="100">
-
-- Music: 
-  
-- Image: Ulrike & Gert Fischer  
-  
-- Source Code: [./ulrike/tagging-factory/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/tagging-factory) 
 
 ## 11. White Water Fun
 
