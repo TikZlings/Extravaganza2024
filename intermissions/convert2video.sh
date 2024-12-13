@@ -93,4 +93,4 @@ repeatconvert(){
 # convert2video lion "Meanwhile in Africa..."
 # convert2video silentnight "Silent Night"
 # convert2video finale "Grand Finale"
-# repeatconvert credits "./extravaganza-credits.pdf" 150
+repeatconvert credits "./extravaganza-credits.pdf" 150
