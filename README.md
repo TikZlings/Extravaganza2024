@@ -131,3 +131,14 @@ The full video is available from ...
   https://pixabay.com/photos/christmas-background-christmas-1869902/
   
 - Source Code: [./carla/excitingtimes/](https://github.com/TikZlings/Extravaganza2024/tree/main/carla/excitingtimes)
+
+## 12. Joy to the world
+
+<img align="right" src="./ulrike/joy/joy.png" height="100">
+
+- Joy To The World The Bach Choir Lyrics
+  https://www.youtube.com/watch?v=cr8myPmEpWw
+  
+- Image: Ulrike & Gert Fischer  
+  
+- Source Code: [./ulrike/joy/](https://github.com/TikZlings/Extravaganza2024/tree/main/ulrike/joy) 
