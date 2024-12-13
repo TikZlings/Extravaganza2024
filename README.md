@@ -8,7 +8,6 @@ The full video is available from https://vimeo.com/1038963018
 
 [![](./intermissions/icon_large.png)](https://vimeo.com/1038963018)
 
-
 ## 1. Exciting Times
 
 <img align="right" src="./carla/excitingtimes/excitingtimes.png" height="100">
