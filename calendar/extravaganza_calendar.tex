@@ -31,9 +31,10 @@
   {#1\strut \nodepart{second}\includegraphics[width=#2]{#3}};\par
   \vspace*{0.1cm}%
 }
-\makeatother
+
 
 \makeatletter
+\pretocmd{\cdc@printmonthname}{\strut}{}{}
 \def\battext{bat}
 \newcommand{\inserttikzlings}{%
   \begin{tikzpicture}[scale=1.18]
@@ -54,7 +55,7 @@
 
 \newcommand{\timestamp}[1]{
 \begin{tikzpicture}[remember picture,overlay]
-\node at ([xshift=5.65cm,yshift=-2.3cm]current page.center) { \fancyqr[color=titlescolour,size=3cm]{https://vimeo.com/1038963018\##1}};
+\node at ([xshift=5.4cm,yshift=-2.3cm]current page.center) { \fancyqr[color=titlescolour,size=3cm]{https://vimeo.com/1038963018\##1}};
 \end{tikzpicture}
 }
 
@@ -156,19 +157,19 @@
 \end{monthCalendar}
 \timestamp{t=0m26s}
 
-\illustration[Paddington]{\textwidth,page=1}{../samcarter/paddington/paddington}
+\illustration[Exciting Times]{\textwidth,page=1}{../carla/halloween/ExcitingTimesHalloween.pdf}
 \begin{monthCalendar}{2025}{10}
 \event{2025-10-16}{}{Global Cat Day}
 \event{2025-10-25}{}{Saint Crispin's Day}
 \end{monthCalendar}
-\timestamp{t=1m48s}
+\timestamp{t=0m10s}
 
-\illustration[Exciting Times]{\textwidth,page=1}{../carla/halloween/ExcitingTimesHalloween.pdf}
+\illustration[Paddington]{\textwidth,page=1}{../samcarter/paddington/paddington}
 \begin{monthCalendar}{2025}{11}
 \event{2025-11-01}{}{\LaTeX\ release}
 \event{2025-11-07}{}{Hug a Bear Day}
 \end{monthCalendar}
-\timestamp{t=0m10s}
+\timestamp{t=1m48s}
 
 \illustration[Grand Finale]{\textwidth,page=555}{../ulrike/finale/finale}
 \begin{monthCalendar}{2025}{12}
