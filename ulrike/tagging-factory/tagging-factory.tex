@@ -22,7 +22,14 @@
 
 \setbeamertemplate{navigation symbols}{}
 
-\setbeamertemplate{background canvas}{\includegraphics[trim=0 18cm 0cm 5cm,width=\paperwidth,height=\paperheight]{strand}}%
+\setbeamertemplate{background canvas}{\includegraphics[trim=0 18cm 0cm 5cm,width=\paperwidth,height=\paperheight]{strand}%
+\begin{tikzpicture}[overlay,remember picture]
+\node[anchor=north east,text=gray,font=\scriptsize] at (current page.north east) {\begin{tabular}{l@{}}
+ \LaTeX\ Tagging Project\\
+ https://latex3.github.io/tagging-project/
+ \end{tabular}};
+\end{tikzpicture}
+}%
 \begin{document}
 \def\ybird{3}
 \begin{frame}
@@ -151,7 +158,7 @@
 \begin{tikzpicture}
 \path[use as bounding box](-1,1) rectangle (10,5);
 \node at (2,\ybird) {\usebox\birdbox};
-\tagpost[xshift=1.5cm,yshift=1cm]{Formula}
+\tagpost[xshift=1.5cm,yshift=1.4cm]{\begin{tabular}[b]{l}Formula\\ math\\ mi mo mn\end{tabular}}
 \node[anchor=south west] at (\inteval{15-\the\value{page}}cm,-1.5cm)
 {\includegraphics[page=7]{tagging-factory-input}};
 \end{tikzpicture}
