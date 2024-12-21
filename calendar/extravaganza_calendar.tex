@@ -52,10 +52,11 @@
 \makeatother
 
 \usepackage{fancyqr}
+\usepackage[hidelinks]{hyperref}
 
 \newcommand{\timestamp}[1]{
 \begin{tikzpicture}[remember picture,overlay]
-\node at ([xshift=5.4cm,yshift=-2.3cm]current page.center) { \fancyqr[color=titlescolour,size=3cm]{https://vimeo.com/1038963018\##1}};
+\node at ([xshift=5.4cm,yshift=-2.3cm]current page.center) { \fancyqr[color=titlescolour,size=3cm,hyperlink]{https://vimeo.com/1038963018\##1}};
 \end{tikzpicture}
 }
 
