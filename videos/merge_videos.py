@@ -12,36 +12,36 @@ padding = 1.5
 
 # change volume VideoFileClip("../example-scene/Example.mp4").volumex(1.0),  
 video_clips = [
-  VideoFileClip("../intermissions/title.mp4"),
-  VideoFileClip("../intermissions/excitingtimes.mp4"),
-  VideoFileClip("../carla/excitingtimes/excitingtimes.mp4"),     
-  VideoFileClip("../intermissions/unstoppable.mp4"),
-  VideoFileClip("../samcarter/unstoppable/unstoppable.mp4"),  
-  VideoFileClip("../intermissions/flowerpower.mp4"),
-  VideoFileClip("../samcarter/flowerpower/flowerpower.mp4"),    
-  VideoFileClip("../intermissions/mariachi.mp4"),
-  VideoFileClip("../carla/mariachi/mariachi.mp4"),    
-  VideoFileClip("../intermissions/paddington.mp4"),
-  VideoFileClip("../samcarter/paddington/paddington.mp4"),   
-  VideoFileClip("../intermissions/joy.mp4"),
-  VideoFileClip("../ulrike/joy/joy.mp4"),   
+  # VideoFileClip("../intermissions/title.mp4"),
+  # VideoFileClip("../intermissions/excitingtimes.mp4"),
+  # VideoFileClip("../carla/excitingtimes/excitingtimes.mp4"),     
+  # VideoFileClip("../intermissions/unstoppable.mp4"),
+  # VideoFileClip("../samcarter/unstoppable/unstoppable.mp4"),  
+  # VideoFileClip("../intermissions/flowerpower.mp4"),
+  # VideoFileClip("../samcarter/flowerpower/flowerpower.mp4"),    
+  # VideoFileClip("../intermissions/mariachi.mp4"),
+  # VideoFileClip("../carla/mariachi/mariachi.mp4"),    
+  # VideoFileClip("../intermissions/paddington.mp4"),
+  # VideoFileClip("../samcarter/paddington/paddington.mp4"),   
+  # VideoFileClip("../intermissions/joy.mp4"),
+  # VideoFileClip("../ulrike/joy/joy.mp4"),   
   VideoFileClip("../intermissions/tagging-factory.mp4"),
-  VideoFileClip("../ulrike/tagging-factory/tagging-factory.mp4"),    
-  VideoFileClip("../intermissions/india.mp4"),
-  VideoFileClip("../ulrike/india/india.mp4"),         
-  VideoFileClip("../intermissions/batbear.mp4"),
-  VideoFileClip("../samcarter/batbear/batbear.mp4"), 
-  VideoFileClip("../intermissions/abbeyroad.mp4"),
-  VideoFileClip("../samcarter/abbeyroad/abbeyroad.mp4"),
-  VideoFileClip("../intermissions/whitewaterride.mp4"),
-  VideoFileClip("../samcarter/whitewaterride/whitewaterride.mp4").volumex(1.5),     
-  VideoFileClip("../intermissions/lion.mp4"),
-  VideoFileClip("../samcarter/lion/lion.mp4"),  
-  VideoFileClip("../intermissions/silentnight.mp4"),
-  VideoFileClip("../ulrike/silentnight/silentnight.mp4"),        
-  VideoFileClip("../intermissions/finale.mp4"),
-  VideoFileClip("../ulrike/finale/finale.mp4"),  
-  VideoFileClip("../intermissions/credits.mp4"),
+  VideoFileClip("../ulrike/tagging-factory/special_cut.mp4"),    
+  # VideoFileClip("../intermissions/india.mp4"),
+  # VideoFileClip("../ulrike/india/india.mp4"),         
+  # VideoFileClip("../intermissions/batbear.mp4"),
+  # VideoFileClip("../samcarter/batbear/batbear.mp4"), 
+  # VideoFileClip("../intermissions/abbeyroad.mp4"),
+  # VideoFileClip("../samcarter/abbeyroad/abbeyroad.mp4"),
+  # VideoFileClip("../intermissions/whitewaterride.mp4"),
+  # VideoFileClip("../samcarter/whitewaterride/whitewaterride.mp4").volumex(1.5),     
+  # VideoFileClip("../intermissions/lion.mp4"),
+  # VideoFileClip("../samcarter/lion/lion.mp4"),  
+  # VideoFileClip("../intermissions/silentnight.mp4"),
+  # VideoFileClip("../ulrike/silentnight/silentnight.mp4"),        
+  # VideoFileClip("../intermissions/finale.mp4"),
+  # VideoFileClip("../ulrike/finale/finale.mp4"),  
+  # VideoFileClip("../intermissions/credits.mp4"),
 ]
 
 ################################################################################
@@ -72,16 +72,16 @@ video_fx_list = []
 idx = 0
 
 # adding the merged video first
-video_fx_list.append(merged_video.set_start(idx).crossfadein(padding).crossfadeout(padding).audio_fadein(padding).audio_fadeout(padding))
-idx += merged_video.duration - padding
+# video_fx_list.append(merged_video.set_start(idx).crossfadein(padding).crossfadeout(padding).audio_fadein(padding).audio_fadeout(padding))
+# idx += merged_video.duration - padding
 
 # rest of the videos
-for video in video_clips[2:]:
+for video in video_clips[0:]:
     video_fx_list.append(video.set_start(idx).crossfadein(padding).crossfadeout(padding).audio_fadein(padding).audio_fadeout(padding))
     idx += video.duration - padding
 
 final_video = CompositeVideoClip(video_fx_list)
 final_video.write_videofile("Extravaganza_raw.mp4") 
 
-os.system("HandBrakeCLI --crop 0:0:0:0 -i Extravaganza_raw.mp4 -o Extravaganza.mp4") 
+os.system("HandBrakeCLI --crop 0:0:0:0 -i Extravaganza_raw.mp4 -o Special.mp4") 
 os.system("rm Extravaganza_raw.mp4")
