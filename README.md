@@ -4,9 +4,17 @@
 
 This repository contains the souce code of the Great TikZlings Extravanganza 2024, brought to you by [Ulrike](https://github.com/u-fischer) & [Gert Fischer](https://github.com/g-fischer), [Carla Maggi](https://github.com/CarLaTeX), [Paulo Cereda](https://github.com/cereda) and [samcarter](https://github.com/samcarter).
 
+## Video
+
 The full video is available from https://vimeo.com/1038963018
 
 [![](./intermissions/icon_large.png)](https://vimeo.com/1038963018)
+
+## Calendar
+
+To shorten the waiting time until the next Extravaganza, we created the exclusive "The Great TikZlings Calendar 2025". It has all important dates from the TeX-World and the Tikzling universe. Stay up to date!
+
+<a href="https://raw.githubusercontent.com/TikZlings/Extravaganza2024/main/calendar/extravaganza_calendar.pdf"><img src="./calendar/extravaganza_calendar-preview.png" alt="The Great TikZlings Calendar 2025" height="400"></a>
 
 ## 1. Exciting Times
 
