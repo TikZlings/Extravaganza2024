@@ -16,6 +16,8 @@ To shorten the waiting time until the next Extravaganza, we created the exclusiv
 
 <a href="https://raw.githubusercontent.com/TikZlings/Extravaganza2024/main/calendar/extravaganza_calendar.pdf"><img src="./calendar/extravaganza_calendar-preview.png" alt="The Great TikZlings Calendar 2025" height="400"></a>
 
+(The design was modified from LianTze Lim's fantastic calendar template  https://tex.my/category/calendar/ which made creating this calendar really easy.)
+
 ## 1. Exciting Times
 
 <img align="right" src="./carla/excitingtimes/excitingtimes.png" height="100">
